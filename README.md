@@ -1,5 +1,4 @@
 Data Science Pipeline with Polars and Arrow
-
 Overview
 
 This project demonstrates a full data science pipeline in Rust, from data ingestion to visualization, using the polars crate for DataFrame-like functionality and Apache Arrow for memory-efficient analytics. The pipeline reads large datasets, processes them to compute statistical summaries (e.g., mean, variance), and visualizes the insights through charts and graphs.
