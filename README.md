@@ -1,4 +1,4 @@
-# Data Science Pipeline with Polars and Arrow
+Data Science Pipeline with Polars and Arrow
 
 Overview
 
