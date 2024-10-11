@@ -1,0 +1,12 @@
+[package]
+name = "data-science-pipeline"
+version = "0.1.0"
+authors = ["Your Name <youremail@example.com>"]
+edition = "2021"
+
+[dependencies]
+polars = { version = "0.29.2", features = ["csv-file", "lazy", "object"] }
+arrow = "39.0.0"
+plotters = "0.3.1"
+plotters-svg = "0.3.1"
+clap = { version = "4.1.14", features = ["derive"] }
