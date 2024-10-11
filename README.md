@@ -1,17 +1,17 @@
 # Data Science Pipeline with Polars and Arrow
 
-## Overview
+Overview
 
 This project demonstrates a full data science pipeline in Rust, from data ingestion to visualization, using the polars crate for DataFrame-like functionality and Apache Arrow for memory-efficient analytics. The pipeline reads large datasets, processes them to compute statistical summaries (e.g., mean, variance), and visualizes the insights through charts and graphs.
 
-### Features
+Features
 
 	•	Data Ingestion: Efficiently read large datasets using polars and arrow.
 	•	Data Processing: Compute statistical summaries such as mean and variance.
 	•	Data Visualization: Generate interactive graphs using the plotters crate.
 	•	Memory Optimization: Utilize Apache Arrow for efficient in-memory data representation.
 
-### Repository Structure
+Repository Structure
 
 .
 ├── Cargo.toml
@@ -25,14 +25,14 @@ This project demonstrates a full data science pipeline in Rust, from data ingest
     ├── main.rs
     └── visualization.rs
 
-### Getting Started
+Getting Started
 
-#### Prerequisites
+Prerequisites
 
 	•	Rust: Install the latest stable version from rust-lang.org.
 	•	Cargo: Rust’s package manager (comes with Rust installation).
 
-#### Dependencies
+Dependencies
 
 The project uses the following Rust crates:
 
@@ -41,7 +41,7 @@ The project uses the following Rust crates:
 	•	plotters and plotters-svg for data visualization.
 	•	clap for command-line argument parsing.
 
-#### Installation
+Installation
 
 	1.	Clone the Repository
 
@@ -59,23 +59,23 @@ cargo build --release
 
 
 
-#### Usage
+Usage
 
 Run the project with the required command-line arguments:
 
 cargo run --release -- --input data/large_dataset.csv --column value
 
-#### Options:
+Options:
 
 	•	--input <FILE_PATH>: Path to the CSV data file (default: data/large_dataset.csv).
 	•	--column <COLUMN_NAME>: Name of the column to analyze (required).
 
-#### Expected Output
+Expected Output
 
 	•	Statistical Summaries: Printed to the console.
 	•	Visualization Charts: Saved in the output directory as SVG files.
 
-#### Detailed Implementation
+Detailed Implementation
 
 1. Cargo.toml
 
