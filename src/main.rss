@@ -1,0 +1,37 @@
+// src/main.rs
+
+mod data_processing;
+mod visualization;
+
+use clap::Parser;
+use data_processing::process_data;
+use std::fs;
+use visualization::create_charts;
+
+/// Data Science Pipeline in Rust
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    /// Path to the CSV data file
+    #[arg(short, long, default_value = "data/large_dataset.csv")]
+    input: String,
+
+    /// Column name to analyze
+    #[arg(short, long)]
+    column: String,
+}
+
+fn main() {
+    let args = Args::parse();
+
+    // Ensure the output directory exists
+    fs::create_dir_all("output").expect("Failed to create output directory");
+
+    // Read and process the data
+    let summary = process_data(&args.input, &args.column);
+
+    // Generate visualizations
+    create_charts(&summary, &args.column);
+
+    println!("Data processing and visualization completed successfully.");
+}
